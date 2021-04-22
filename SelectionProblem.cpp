@@ -141,7 +141,7 @@ int main() {
             copy(begin(dataArray), end(dataArray), begin(dataArrayCopy));
 
             randSelectStart = steady_clock::now();
-            cout << RandomizedSelect(dataArrayCopy, inputStart, inputEnd, inputTarget) << endl;
+            RandomizedSelect(dataArrayCopy, inputStart, inputEnd, inputTarget);
             randSelectStop = steady_clock::now();
 
             randSelectDuration = min(randSelectDuration, randSelectStop - randSelectStart);
@@ -167,7 +167,7 @@ int main() {
             copy(begin(dataArray), end(dataArray), begin(dataArrayCopy));
 
             ShellsortSelectStart = steady_clock::now();
-            cout << ShellsortSelect(dataArrayCopy, inputStart, inputEnd, inputTarget) << endl;
+            ShellsortSelect(dataArrayCopy, inputStart, inputEnd, inputTarget);
             ShellsortSelectStop = steady_clock::now();
 
             shellDuration = min(shellDuration, ShellsortSelectStop - ShellsortSelectStart);
