@@ -120,6 +120,7 @@ int main() { // Main -----------------------------------------------------------
 		int inputStart = 0;
 		int inputEnd = 10; // Maximum dataSize - 1
 		int inputTarget = 3; // Must be smaller than inputEnd - inputStart
+        int testNumbers = 3; // Number of times each algorithm should be timed.
 
 		if (inputEnd > dataSize)
 		{
@@ -137,7 +138,7 @@ int main() { // Main -----------------------------------------------------------
 
 			auto randSelectDuration = randSelectStop - randSelectStart;
 
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < testNumbers; i++)
 			{
 				int dataArrayCopy[dataSize];
 				copy(begin(dataArray), end(dataArray), begin(dataArrayCopy));
@@ -165,7 +166,7 @@ int main() { // Main -----------------------------------------------------------
 
 			auto shellDuration = ShellsortSelectStop - ShellsortSelectStart;
 
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < testNumbers; i++)
 			{
 				int dataArrayCopy[dataSize];
 				copy(begin(dataArray), end(dataArray), begin(dataArrayCopy));
